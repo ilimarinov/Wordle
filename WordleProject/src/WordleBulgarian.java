@@ -11,7 +11,7 @@ public class WordleBulgarian extends WordleBody {
     public static final String NOT_IN_POSITION_LETTERS_MESSAGE = "Букви, които не са на правилната позиция: ";
     public static final String NOT_USED_LETTERS_MESSAGE = "Букви, които не са използвани: ";
 
-    public static final String PATH = "/Users/iliyanmarinov/Wordle/wordleBulgarian.txt";
+    public static final String PATH = "src/wordleBulgarian.txt";
 
     public WordleBulgarian() {
         super.Solver();
