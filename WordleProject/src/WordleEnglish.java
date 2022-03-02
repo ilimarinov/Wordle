@@ -15,14 +15,13 @@ public class WordleEnglish extends WordleBody {
     public static final String PATH = "src/wordleEnglish.txt";
 
     public WordleEnglish() {
-        super.Solver();
+        super.GameLoop();
     }
 
     public SortedSet<Character> AlphabetGenerator() {
         SortedSet<Character> Alphabet = new TreeSet<>();
-        for (char a = 'a'; a <= 'z'; ++a) {
-            Alphabet.add(a);
-        }
+        Collections.addAll(Alphabet, 'а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й',
+                'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ','ь','ю', 'я');
         return Alphabet;
     }
 

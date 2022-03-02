@@ -14,14 +14,13 @@ public class WordleBulgarian extends WordleBody {
     public static final String PATH = "src/wordleBulgarian.txt";
 
     public WordleBulgarian() {
-        super.Solver();
+        super.GameLoop();
     }
 
     public SortedSet<Character> AlphabetGenerator() {
         SortedSet<Character> Alphabet = new TreeSet<>();
-        for (char a = 'а'; a <= 'я'; ++a) {
-            Alphabet.add(a);
-        }
+        Collections.addAll(Alphabet, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+                'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z');
         return Alphabet;
     }
 

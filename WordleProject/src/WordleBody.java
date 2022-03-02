@@ -28,9 +28,10 @@ public abstract class WordleBody {
 
     private static Map<Character, Integer> guessWordLettersCount = new HashMap<>();
     private static Map<Character, Integer> wordleLettersCount = new HashMap<>();
+    private static Map<Character, Integer> lettersCounter = new HashMap<>();
 
-    protected void Solver() {
-        setWord();
+    protected void GameLoop() {
+        pickNextWord();
 
         notUsedLetters = AlphabetGenerator();
 
@@ -39,7 +40,7 @@ public abstract class WordleBody {
         }
         for (int i = 0; i < ATTEMPTS; i++) {
 
-            setGuessedWord();
+            readGuessedWord();
 
             duplicateWords.add(guessWord);
 
@@ -51,8 +52,11 @@ public abstract class WordleBody {
             inPositionLetters.clear();
             notInPositionLetters.clear();
 
-            wordleResetCounter();
-            guessWordResetCounter();
+            wordleLettersCount.clear();
+            wordleLettersCount = LettersCounter(wordle);
+
+            guessWordLettersCount.clear();
+            guessWordLettersCount = LettersCounter(guessWord);
 
             for (int j = 0; j < WORDLE_CHARACTERS; j++) {
                 currentLetterGuessed = guessWord.charAt(j);
@@ -90,7 +94,7 @@ public abstract class WordleBody {
         return wordle;
     }
 
-    private void setWord() {
+    private void pickNextWord() {
         BufferedReader reader = null;
 
         try {
@@ -119,7 +123,7 @@ public abstract class WordleBody {
         return guessWord;
     }
 
-    private void setGuessedWord() {
+    private void readGuessedWord() {
         Scanner scanner = new Scanner(System.in);
         do {
             do {
@@ -140,7 +144,6 @@ public abstract class WordleBody {
     }
 
     private Map<Character, Integer> LettersCounter(String word) {
-        Map<Character, Integer> lettersCounter = new HashMap<>();
         for (char x : word.toCharArray()) {
             if (lettersCounter.containsKey(x)) {
                 int count = lettersCounter.get(x);
@@ -150,16 +153,6 @@ public abstract class WordleBody {
             }
         }
         return lettersCounter;
-    }
-
-    private void wordleResetCounter() {
-        wordleLettersCount.clear();
-        wordleLettersCount = LettersCounter(wordle);
-    }
-
-    private void guessWordResetCounter() {
-        guessWordLettersCount.clear();
-        guessWordLettersCount = LettersCounter(guessWord);
     }
 
     protected abstract SortedSet<Character> AlphabetGenerator();
