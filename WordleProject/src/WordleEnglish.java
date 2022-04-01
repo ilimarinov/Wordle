@@ -12,7 +12,7 @@ public class WordleEnglish extends WordleBody {
     public static final String NOT_IN_POSITION_LETTERS_MESSAGE = "Not in position letters: ";
     public static final String NOT_USED_LETTERS_MESSAGE = "Not Used letters so far: ";
 
-    public static final String PATH = "src/wordleEnglish.txt";
+    public static final String PATH = "WordleProject/src/wordleEnglish.txt";
 
     public WordleEnglish() {
         super.GameLoop();

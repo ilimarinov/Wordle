@@ -28,7 +28,6 @@ public abstract class WordleBody {
 
     private static Map<Character, Integer> guessWordLettersCount = new HashMap<>();
     private static Map<Character, Integer> wordleLettersCount = new HashMap<>();
-    private static Map<Character, Integer> lettersCounter = new HashMap<>();
 
     protected void GameLoop() {
         pickNextWord();
@@ -144,6 +143,7 @@ public abstract class WordleBody {
     }
 
     private Map<Character, Integer> LettersCounter(String word) {
+        Map<Character, Integer> lettersCounter = new HashMap<>();
         for (char x : word.toCharArray()) {
             if (lettersCounter.containsKey(x)) {
                 int count = lettersCounter.get(x);
