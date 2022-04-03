@@ -1,0 +1,84 @@
+html {
+
+    font-size: 30px;
+    color: white;
+    font-family: "Helvetica Neue";
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 550;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    text-transform: none;
+}
+
+body {
+    background-color: black
+}
+
+span .wordJs {
+    background-color: dimgrey;
+    padding: 2px;
+}
+
+.alphabet {
+
+    alignment: bottom;
+    font-size: 25px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 60px;
+    margin: 0;
+    padding: 10px;
+}
+
+.inPosition {
+    background-color: green;
+}
+
+.notInPosition {
+    background-color: darkgoldenrod;
+}
+
+.hidden {
+    display: none;
+}
+
+.used {
+    background-color: darkslategrey;
+}
+
+.cell.wordJs {
+    font-size: 40px;
+
+}
+
+.error {
+    font-size: 15px;
+    color: red;
+    alignment: right;
+    text-transform: none;
+}
+

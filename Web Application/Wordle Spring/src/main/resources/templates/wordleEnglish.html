@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>untitled</title>
+    <script defer type="text/javascript" th:src="@{/script.js}"></script>
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<a href="/"><p>WORDLE</p></a>
+
+<form action="#" th:action="@{/english}" th:object="${word}" method="post">
+    <br/>
+    <input type="text" th:field="*{text}"/>
+    <br/>
+    <label class="error" th:errors="*{text}">Name error placeholder</label>
+    <br/>
+    <input type="submit" value="Submit"/>
+    <br/><br/>
+</form>
+
+<div class="table wordTable">
+    <div class="row" th:each="word : ${allWords}">
+        <div class="cell wordJs" th:text="${word.getText()}">Number</div>
+    </div>
+</div>
+<br/>
+<div class="table hidden">
+
+    <div class="row" th:each="word : ${allOutputs}">
+        <div class="cell hiddenWordJs" th:text="${word}">Number</div>
+    </div>
+</div>
+
+<span class="row" th:each="allLetter : ${wordleLetters}">
+
+    <!--<div th:if="${allLetter.isUsed}" class="cell alphabet used" th:text="${allLetter.letter}">Alphabet letters</div>
+    <div th:if="${!allLetter.isUsed}" class="cell alphabet not-used" th:text="${allLetter.letter}">Alphabet letters</div>-->
+
+    <span class="cell alphabet" th:classappend="${allLetter.isUsed} ? 'used' : 'not-used'"
+          th:text="${allLetter.letter}">Alphabet letters</span>
+</span>
+
+<form action="#" th:action="@{/resetWordle}" method="get">
+    <br/>
+    <input type="submit" value="Reset"/>
+    <br/><br/>
+</form>
+
+
+</body>
+</html>
