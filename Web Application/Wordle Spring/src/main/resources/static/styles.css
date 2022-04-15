@@ -1,0 +1,111 @@
+html {
+    font-size: 30px;
+    color: white;
+    font-family: "Helvetica Neue";
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 550;
+}
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited  {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:active  {
+    color: white;
+    text-decoration: none;
+}
+
+a.index-bulgarian:link, a.index-english:link{
+    text-decoration: none;
+    color: black;
+}
+
+a.index-bulgarian:visited, a.index-english:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a.index-bulgarian:hover, a.index-english:hover {
+    color: black;
+    text-decoration: none;
+}
+
+a.index-bulgarian:active, a.index-english:active {
+    color: black;
+    text-decoration: none;
+}
+
+
+h2 {
+    text-transform: none;
+}
+
+body {
+    background-color: black
+}
+
+span .wordJs {
+    background-color: dimgrey;
+    padding: 2px;
+}
+
+.alphabet {
+
+    alignment: bottom;
+    font-size: 25px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 60px;
+    margin: 0;
+    padding: 10px;
+}
+
+.in-position {
+    background-color: green;
+}
+
+.not-in-position {
+    background-color: darkgoldenrod;
+}
+.hidden {
+    display: none;
+}
+.used {
+    background-color: darkslategrey;
+}
+.cell.wordJs {
+    font-size: 40px;
+
+}
+.error {
+    font-size: 15px;
+    color: red;
+    alignment: right;
+    text-transform: none;
+}
+.index-table{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+.index-introduction{
+    alignment: left;
+    font-size: 15px;
+    color: black;
+}
+
+
