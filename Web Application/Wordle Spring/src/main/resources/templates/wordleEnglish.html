@@ -35,9 +35,6 @@
 
 <span class="row" th:each="allLetter : ${wordleLetters}">
 
-    <!--<div th:if="${allLetter.isUsed}" class="cell alphabet used" th:text="${allLetter.letter}">Alphabet letters</div>
-    <div th:if="${!allLetter.isUsed}" class="cell alphabet not-used" th:text="${allLetter.letter}">Alphabet letters</div>-->
-
     <span class="cell alphabet" th:classappend="${allLetter.isUsed} ? 'used' : 'not-used'"
           th:text="${allLetter.letter}">Alphabet letters</span>
 </span>

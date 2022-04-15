@@ -10,10 +10,10 @@ if (words.length > 0) {
             const span = document.createElement("span")
             span.innerHTML = wordText[j]
             if (outputText[j] === "*") {
-                span.className = "inPosition"
+                span.className = "in-position"
             }
             if (outputText[j] === "+") {
-                span.className = "notInPosition"
+                span.className = "not-in-position"
             }
             words[i].append(span)
         }

@@ -1,5 +1,4 @@
 html {
-
     font-size: 30px;
     color: white;
     font-family: "Helvetica Neue";
@@ -7,13 +6,12 @@ html {
     text-align: center;
     font-weight: 550;
 }
-
 a:link {
     text-decoration: none;
     color: white;
 }
 
-a:visited {
+a:visited  {
     color: white;
     text-decoration: none;
 }
@@ -23,10 +21,31 @@ a:hover {
     text-decoration: none;
 }
 
-a:active {
+a:active  {
     color: white;
     text-decoration: none;
 }
+
+a.index-bulgarian:link, a.index-english:link{
+    text-decoration: none;
+    color: black;
+}
+
+a.index-bulgarian:visited, a.index-english:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a.index-bulgarian:hover, a.index-english:hover {
+    color: black;
+    text-decoration: none;
+}
+
+a.index-bulgarian:active, a.index-english:active {
+    color: black;
+    text-decoration: none;
+}
+
 
 h2 {
     text-transform: none;
@@ -54,31 +73,39 @@ p {
     padding: 10px;
 }
 
-.inPosition {
+.in-position {
     background-color: green;
 }
 
-.notInPosition {
+.not-in-position {
     background-color: darkgoldenrod;
 }
-
 .hidden {
     display: none;
 }
-
 .used {
     background-color: darkslategrey;
 }
-
 .cell.wordJs {
     font-size: 40px;
 
 }
-
 .error {
     font-size: 15px;
     color: red;
     alignment: right;
     text-transform: none;
 }
+.index-table{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+.index-introduction{
+    alignment: left;
+    font-size: 15px;
+    color: black;
+}
+
 

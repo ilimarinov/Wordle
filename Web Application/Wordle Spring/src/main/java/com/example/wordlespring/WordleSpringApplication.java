@@ -9,5 +9,4 @@ public class WordleSpringApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WordleSpringApplication.class, args);
 	}
-
 }

@@ -6,10 +6,18 @@
     <link th:href="@{/styles.css}" rel="stylesheet"/>
 </head>
 <body>
-<h1 th:text="#{home.welcome}">Wordle</h1>
-<h2><a href="/english">Play Wordle in English!</a></h2>
-<h2><a href="/bulgarian">Играйте Уърдъл на Български!</a></h2>
-
-
+<h1>Wordle</h1>
+<table class="index-table">
+    <th class="index-introduction">Wordle is simple: You have to guess the secret five-letter word.
+        <br>
+        Type in a word as a guess, and the game tells you which letters are or aren't in the word.
+        <br>
+        The aim is to figure out the secret word with the fewest guesses.</th>
+    <th>
+        <a class="index-english" href="/english">English!</a>
+        <br>
+        <a class="index-bulgarian" href="/bulgarian">Български!</a>
+    </th>
+</table>
 </body>
 </html>

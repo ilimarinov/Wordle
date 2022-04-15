@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/")
 public class WordleMvcController {
     private final GuessWordService guessWordService;
     private final WordleBodyServiceImpl wordleBody;
