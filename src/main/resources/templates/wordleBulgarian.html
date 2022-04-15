@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>untitled</title>
+    <script defer type="text/javascript" th:src="@{/script.js}"></script>
+    <link th:href="@{/styles.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<a href="/"><p>WORDLE</p></a>
+
+<form action="#" th:action="@{/bulgarian}" th:object="${wordBulgarian}" method="post">
+    <br/>
+    <input type="text" th:field="*{text}"/>
+    <br/>
+    <label class="error" th:errors="*{text}">Name error placeholder</label>
+    <br/>
+    <input type="submit" value="Изпрати"/>
+    <br/><br/>
+</form>
+
+<div class="table wordTable">
+    <div class="row" th:each="word : ${allWordsBulgarian}">
+        <div class="cell wordJs" th:text="${word.getText()}">Number</div>
+    </div>
+</div>
+<br/>
+<div class="table hidden">
+
+    <div class="row" th:each="word : ${allOutputsBulgarian}">
+        <div class="cell hiddenWordJs" th:text="${word}">Number</div>
+    </div>
+</div>
+
+<span class="row" th:each="allLetter : ${wordleLettersBulgarian}">
+
+    <span class="cell alphabet" th:classappend="${allLetter.isUsed} ? 'used' : 'not-used'"
+          th:text="${allLetter.letter}">Alphabet letters</span>
+</span>
+
+<form action="#" th:action="@{/resetBulgarianWordle}" method="get">
+    <br/>
+    <input type="submit" value="Рестарт"/>
+    <br/><br/>
+</form>
+</body>
+</html>
