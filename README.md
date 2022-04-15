@@ -1,6 +1,9 @@
-# Wordle console game
+# Wordle game
 
 Wordle is simple: You have to guess the secret five-letter word. Type in a word as a guess, and the game tells you which letters are or aren't in the word. The aim is to figure out the secret word with the fewest guesses.
+Reference:
+Pisani, J. (2022, March 30). What is Wordle and How to Play? Wall Street Journal.
+https://www.wsj.com/articles/wordle-what-is-word-game-11642016202/
 
 Web Application - English Wordle:
 ![English Correct Guess](https://user-images.githubusercontent.com/95153326/162208991-d62689f5-5084-4846-878b-04ea930f0054.png)
