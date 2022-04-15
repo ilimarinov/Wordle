@@ -46,7 +46,6 @@ a.index-bulgarian:active, a.index-english:active {
     text-decoration: none;
 }
 
-
 h2 {
     text-transform: none;
 }
@@ -80,29 +79,36 @@ p {
 .not-in-position {
     background-color: darkgoldenrod;
 }
+
 .hidden {
     display: none;
 }
+
 .used {
     background-color: darkslategrey;
 }
+
 .cell.wordJs {
     font-size: 40px;
-
 }
+
 .error {
     font-size: 15px;
     color: red;
     alignment: right;
     text-transform: none;
 }
-.index-table{
+
+.index-table {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
 }
-.index-introduction{
+
+.index-introduction {
     alignment: left;
     font-size: 15px;
     color: black;
